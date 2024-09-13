@@ -105,3 +105,4 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+appUpdateVersion: 1.0.0
