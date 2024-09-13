@@ -1,0 +1,20 @@
+## Kubernetes Deployment
+##
+deployment:
+  enabled: true
+  name: "erp-doc"
+  replicas: 1
+  appName: "erp-doc"
+  containerName: "erp-doc"
+  image: "nandanramdani/fleet-cd-app:main"
+  port: 3000
+
+## Kubernetes Service
+##
+service:
+  enabled: true
+  name: "erp-doc"
+  appName: "erp-doc"
+  type: "ClusterIP"
+  servicePort: 3030
+  targetPort: 3000

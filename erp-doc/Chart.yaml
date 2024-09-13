@@ -1,0 +1,9 @@
+apiVersion: v2
+description: A Helm Chart for ERP Documentation
+keywords:
+- erp-doc
+maintainers:
+- email: nandanramdani608@gmail.com
+  name: Nandan
+name: erp-doc
+version: 1.0.0
