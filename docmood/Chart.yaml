@@ -1,6 +1,7 @@
 apiVersion: v2
 name: docmood
 description: A Helm chart for Kubernetes
+icon: https://avatars.githubusercontent.com/u/142352223?s=200&v=4
 
 # A chart can be either an 'application' or a 'library' chart.
 #
