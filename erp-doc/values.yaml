@@ -3,7 +3,7 @@
 deployment:
   enabled: true
   name: "erp-doc"
-  replicas: 1
+  replicas: 2
   appName: "erp-doc"
   containerName: "erp-doc"
   image: "nandanramdani/fleet-cd-app:main"
