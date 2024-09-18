@@ -8,7 +8,7 @@ image:
   repository: nandanramdani/docmood
   pullPolicy: Always
   tag: main
-  digest: ""
+  digest: nandanramdani/docmood@sha256:c7269071b2a3e5043850308701094c11f06046ad3558036823c289a22b9b471c
 
 imagePullSecrets: []
 nameOverride: ""
