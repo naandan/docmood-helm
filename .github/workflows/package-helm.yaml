@@ -1,0 +1,41 @@
+name: Package Helm Chart
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  package-helm-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v2
+
+      - name: Set up environment variables
+        run: |
+          echo "REPO_NAME=$(echo ${GITHUB_REPOSITORY#*/} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+          echo "REPO_USER=$(echo ${GITHUB_REPOSITORY_OWNER} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
+      - name: Install Helm
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+          chmod 700 get_helm.sh
+          ./get_helm.sh
+          rm get_helm.sh
+
+      - name: Package Helm Chart
+        run: |
+          helm package docmood
+
+      - name: Index Helm Chart
+        run: |
+          helm repo index . --url https://${{ env.REPO_USER }}.github.io/${{ env.REPO_NAME }}/
+
+      - name: Push Helm Chart
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add .
+          git commit -m 'Update Helm Chart'
+          git push https://x-access-token:${{ secrets.GHCR_TOKEN }}@github.com/${{ env.REPO_USER }}/${{ env.REPO_NAME }}.git main
