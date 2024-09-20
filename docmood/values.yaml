@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: nandanramdani/docmood:main
-  digest: nandanramdani/docmood@sha256:152738103bbd3b727b7fe585634a2d67a83a8a2946c63a7f0ad231379593d746
+  digest: nandanramdani/docmood@sha256:f71faa8a4268fab90ea53e500790a6e43aa3083fdbf07e64870ab1bed597ac9e
   pullPolicy: Always
 
 imagePullSecrets: []
