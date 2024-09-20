@@ -3,13 +3,13 @@ entries:
   docmood:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-09-20T15:52:31.848499543Z"
+    created: "2024-09-20T16:19:56.70918133Z"
     description: A Helm chart for Kubernetes
-    digest: cbcef6c61e3df223caad1c4a593d1a05e711588cf37f4d573e05f9c5d40f6637
+    digest: 864bc5963f3920b2630998edab59264e3fd6979c5a0719d760649cbca3eba933
     icon: https://avatars.githubusercontent.com/u/142352223?s=200&v=4
     name: docmood
     type: application
     urls:
     - https://naandan.github.io/docmood-helm/docmood-1.0.0.tgz
     version: 1.0.0
-generated: "2024-09-20T15:52:31.84793603Z"
+generated: "2024-09-20T16:19:56.708623956Z"
